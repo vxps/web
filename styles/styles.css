@@ -173,7 +173,7 @@ body {
     float: right;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     .logo{
         display: flex;
         justify-content:space-around;
@@ -229,7 +229,7 @@ body {
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .logo{
         display: flex;
         justify-content:space-around;
