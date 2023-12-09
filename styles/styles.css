@@ -100,11 +100,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .register label {
     font-size: 20px;
     width: 100%;
     margin-left: 10px;
 }
+
 .register input{
     width: 200px;
     height: 20px;
@@ -209,7 +211,7 @@ body {
     bottom: 0; 
     left: 0;
     width: 100%;
-    height: 110px;
+    height: 100px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .bottom-bar a {
@@ -223,14 +225,44 @@ body {
     width: 200px;
     float: left;
 }
+
 .bottom-bar img.rock {
     max-height: 100%;
     width: 200px;
     float: right;
 }
 
+.film-table{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.film-table a{
+    text-decoration: none;
+    padding: 10px 20px; 
+    border: 1px solid #999; 
+    border-radius: 10px; 
+    background-color: #402D17;
+    color: #FFB65B;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s;
+}
+
+.film-table a:hover{
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 .load-time-text {
     color: red;
+}
+
+.form label{
+    font-size: 15px;
+}
+
+.form input{
+    font-size: 25px;
+    margin: 2px;
 }
 
 @media (max-width: 800px){

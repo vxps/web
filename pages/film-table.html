@@ -5,50 +5,54 @@
     <meta name="keywords" content="отзывы к фильмам, отзывы к сериалам, рецензии к фильмам/сериалам">
     <meta name="description" content="Оценки к фильмам и сериалам от всех киноманов">
     <title>Reviewerzzz</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/web/styles/styles.css">
     <script src="/web/scripts/pageload.js"></script>
     <script src="/web/scripts/menu.js"></script>
+    <script src="/web/scripts/film-table.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="логотип сайта"></a>
+            <a href="/web/index.html"><img src="/web/images/logo.png" alt="логотип сайта"></a>
             <div class="rewiev-form">
-                <a href="pages/review.html">&#x1F58AОставить отзыв</a>
+                <a href="/web/pages/review.html">&#x1F58AОставить отзыв</a>
             </div>
             <div class="auth">
-                <a href="pages/signin.html">Войти</a> <br>
-                <a href="pages/registration.html">Зарегистрироваться</a>
+                <a href="/web/pages/signin.html">Войти</a> <br>
+                <a href="/web/pages/registration.html">Зарегистрироваться</a>
             </div>
         </div>
         <div class="menu-navigation">
             <nav>
-                <a href="pages/films.html">Фильмы</a>
-                <a href="pages/series.html">Сериалы</a>
-                <a href="pages/rating.html">Рейтинг</a>
+                <a href="/web/pages/films.html">Фильмы</a>
+                <a href="/web/pages/series.html">Сериалы</a>
+                <a href="/web/pages/rating.html">Рейтинг</a>
             </nav>
         </div>
     </header>
     <main>
         <div class="main-menu">
-            <div class="left-bar">
-                <div class="premiers">
-                    <article>
-                        Премьеры, Скоро в прокате:
-                    </article>
-                </div>
-                <div class="towatchlist"><p>Ежедневный список фильмов для просмотра:</p>
-                    <ol>
-                        <li><ins datetime="2023-09-13T23:00">Бойцовский клуб</ins></li>
-                        <li><del datetime="2023-09-15T22:00">Карты.Деньги.Два ствола</del></li>
-                        <li>Волк с Уолл-стрит</li>
-                    </ol>
-                </div>
-            </div>
             <div class="middle-bar">
-                Киноафиша
+                <div class="load" style="display: none">
+                </div>
+                <form id="table-form" class="table-form">
+                    <div class="form">
+                        <label for="days">Количество дней:</label>
+                        <input class="days" type="number" id="days" name="days" min="1" max="7" required>
+                        <br>
+                        <label for="movies">Количество фильмов:</label>
+                        <input class="movies" type="number" id="movies" name="movies" min="1" max="5" required>
+                        <br>
+                        <button class="make-button" type="submit">Создать</button>
+                    </div>
+                </form>
+                <div class="save" style="display: none">
+                </div>
+                
+                <div id="table" class="table">
+                </div>
             </div>
-            <div class="right-bar">
+            <div class="right-bar" style="display: none;">
                 <div class="genres">
                     <h4>жанры:</h4>
                         <ul>
@@ -72,13 +76,9 @@
     </main>
     <footer>
         <section>
-            <div class="film-table">
-                <a href="/web/pages/film-table.html">Создать список фильмов на неделю</a>
-            </div>
-        <section>
             <div class="bottom-bar">
-                <img class="statham" src="images/statham.jpg" alt="statham">
-                <img class="rock" src="images/rock.jpg" alt="rock">
+                <img class="statham" src="/web/images/statham.jpg" alt="statham">
+                <img class="rock" src="/web/images/rock.jpg" alt="rock">
                 <h3>Полезные ссылки</h3>
                 <a href="https://www.instagram.com">instagram</a>
                 <a href="https://stackoverflow.com">stackoverflow</a>
