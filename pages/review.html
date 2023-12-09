@@ -6,6 +6,8 @@
     <meta name="description" content="Оценки к фильмам и сериалам от всех киноманов">
     <title>Reviewerzzz - rewiew</title>
     <link rel="stylesheet" href="/web/styles/styles.css">
+    <script src="/web/scripts/pageload.js"></script>
+    <script src="/web/scripts/menu.js"></script>
 </head>
 <body>
     <header>
@@ -44,23 +46,33 @@
                 </div>
             </div>
             <div class="middle-bar">
-                Фильмы
+                <form class="review-form">
+                    <label for="login">логин:</label>
+                    <input type="text" id="login" name="login" required>
+                    <br>
+                    <label for="genre">жанр: </label>
+                    <input type="text" id="genre" name="genre" required>
+                    <br>
+                    <textarea id="review" name="review" rows="4" required></textarea>
+                    <br>
+                    <button type="submit">Отправить отзыв</button>
+                </form>
             </div>
             <div class="right-bar">
                 <div class="genres">
                     <h4>жанры:</h4>
                         <ul>
-                            <li>комедии</li>
-                            <li>детективы</li>
-                            <li>боевики</li>
-                            <li>драмы</li>
-                            <li>мелодрамы</li>
-                            <li>триллеры</li>
-                            <li>документальные</li>
+                            <li><a href="/web/pages/comedies.html">комедии</a></li>
+                            <li><a href="/web/pages/detectives.html">детективы</a></li>
+                            <li><a href="/web/pages/actionmovie.html">боевики</a></li>
+                            <li><a href="/web/pages/drama.html">драмы</a></li>
+                            <li><a href="/web/pages/melodrama.html">мелодрамы</a></li>
+                            <li><a href="/web/pages/thriller.html">триллеры</a></li>
+                            <li><a href="/web/pages/documental.html">документальные</a></li>
                         </ul>
                 </div>
                 <div class="extra-params">
-                    <p>Дополнительные параметры:</p>
+                    Дополнительные параметры:
                     <p>длительность</p>
                     <p>новинки</p>
                     <p>топ рейтинга</p>
