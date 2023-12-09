@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const loadArea = document.createElement("div")
         loadArea.className = "load"
-        loadArea.textContent = "В памяти сохранены предыдущие параметры. Загрузить их?"
+        loadArea.textContent = "Сохранены параметры предыдущей загрузки. Загрузить их?"
 
         const loadButton = document.createElement("b")
-        loadButton.innerHTML = `<button class="load-button" type="submit">Загрузить</button>`
+        loadButton.innerHTML = `<button class="load-button" type="submit">Да</button>`
 
         const notLoadButton = document.createElement("b")
-        notLoadButton.innerHTML = `<button class="not-load-button" type="submit">Не загружать</button>`
+        notLoadButton.innerHTML = `<button class="not-load-button" type="submit">Нет</button>`
 
         loadArea.appendChild(loadButton)
         loadArea.appendChild(notLoadButton)
@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
             saveArea.textContent = "Сохранить введённые параметры?"
 
             const saveButton = document.createElement("b")
-            saveButton.innerHTML = `<button class="save-button" type="submit">Сохранить</button>`
+            saveButton.innerHTML = `<button class="save-button" type="submit">Да</button>`
 
             const notSaveButton = document.createElement("b")
-            notSaveButton.innerHTML = `<button class="not-save-button" type="submit">Не сохранять</button>`
+            notSaveButton.innerHTML = `<button class="not-save-button" type="submit">Нет</button>`
 
             saveArea.appendChild(saveButton)
             saveArea.appendChild(notSaveButton)
@@ -109,8 +109,23 @@ function printUserTable(days, count) {
                         <th>Понедельник</th>`
 
     
-    if (days.value == 2) {
+    if (days.value >= 2) {
         tr.innerHTML += `<th>вторник</th>`;
+    }
+    if (days.value >= 3) {
+        tr.innerHTML += `<th>среда</th>`;
+    }
+    if (days.value >= 4) {
+        tr.innerHTML += `<th>четверг</th>`;
+    }
+    if (days.value >= 5) {
+        tr.innerHTML += `<th>пятница</th>`;
+    }
+    if (days.value >= 6) {
+        tr.innerHTML += `<th>суббота</th>`;
+    }
+    if (days.value >= 7) {
+        tr.innerHTML += `<th>воскресенье</th>`;
     }
 
     thead.appendChild(tr);
@@ -127,8 +142,23 @@ function printUserTable(days, count) {
     <td class="monday"><textarea name="monday-${i}"></textarea></td>`;
 
 
-        if (days.value == 2) {
+        if (days.value >= 2) {
             row.innerHTML += `<td class="tuesday"><textarea type="text" name="tuesday-${i}"></textarea></td>`;
+        }
+        if (days.value >= 3) {
+            row.innerHTML += `<td class="wednesday"><textarea type="text" name="wednesday-${i}"></textarea></td>`;
+        }
+        if (days.value >= 4) {
+            row.innerHTML += `<td class="thursday"><textarea type="text" name="thursday-${i}"></textarea></td>`;
+        }
+        if (days.value >= 5) {
+            row.innerHTML += `<td class="friday"><textarea type="text" name="friday-${i}"></textarea></td>`;
+        }
+        if (days.value >= 6) {
+            row.innerHTML += `<td class="saturday"><textarea type="text" name="saturday-${i}"></textarea></td>`;
+        }
+        if (days.value >= 7) {
+            row.innerHTML += `<td class="sunday"><textarea type="text" name="sunday-${i}"></textarea></td>`;
         }
 
         tbody.appendChild(row);
