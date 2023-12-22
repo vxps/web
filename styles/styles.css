@@ -92,7 +92,7 @@ body {
     border: 1px solid #999; 
     border-radius: 10px; 
     background-color: #BF8845;
-    margin: 0 60px 100px 80px;
+    margin: 0 60px 150px 80px;
 }
 
 .register, .review-form, .sign-in{
@@ -368,4 +368,51 @@ body {
     .middle-bar {
         margin: 0px 50px 0px 20px;
     }
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.swiper-wrapper {
+    display: flex; 
+    transition: transform 0.3s ease;
+}  
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.swiper-slide img.f1{
+    height: 300px;
+}
+.swiper-slide img.f2{
+    height: 300px;
+}
+.swiper-slide img.f3{
+    height: 300px;
+}
+
+.middle-bar-rating {
+    flex-basis: 100%;
+    text-align: center;
+    border: 1px solid #999; 
+    border-radius: 10px; 
+    background-color: #BF8845;
+    margin: 0 60px 150px 80px;
+    position: relative;
+    max-width: 100%; 
+    overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 90%;
+  width: 30px; 
+  height: 30px; 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10%; 
 }

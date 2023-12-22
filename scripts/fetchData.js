@@ -24,7 +24,7 @@ async function fetchAndRenderData() {
 }
 
 function fetchDataWithRandomFilter() {
-    const randomFilter = Math.random() < 0.5 ? '10' : '20';
+    const randomFilter = Math.random() < 0.5 ? '10' : '5';
     const apiUrl = `https://jsonplaceholder.typicode.com/comments?id_lte=${randomFilter}`;
 
     return fetch(apiUrl);

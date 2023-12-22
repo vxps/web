@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/web/styles/styles.css">
     <script src="/web/scripts/pageload.js"></script>
     <script src="/web/scripts/menu.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/web/scripts/swiper.js"></script>
 </head>
 <body>
     <header>
@@ -44,9 +47,25 @@
                     </ol>
                 </div>
             </div>
-            <div class="middle-bar">
+            <div class="middle-bar-rating">
                 Рейтинг фильмов и сериалов
-            </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="f1" src="/web/images/1.png" alt="Изображение 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="f2" src="/web/images/2.png" alt="Изображение 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="f3" src="/web/images/3.jpeg" alt="Изображение 1">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div> 
             <div class="right-bar">
                 <div class="genres">
                     <h4>жанры:</h4>
