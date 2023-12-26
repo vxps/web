@@ -1,22 +1,8 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const apiKey = 'HAMVMCY-MGCMGN8-NG6FEXB-C0QSH45';
-//     const apiUrl = 'https://api.kinopoisk.dev/v1.4/movie?year=2023&genres.name=криминал';
-
-//     fetch(apiUrl)
-//     .then(response => response.json())
-//     .then(data => {
-//         renderMovies(data);
-//     })
-//     .catch(error => {
-//         console.error('Error fetching data:', error);
-//         renderError();
-//     });
-// });
 const headers = {
     "X-API-KEY": "HAMVMCY-MGCMGN8-NG6FEXB-C0QSH45"
 };
   
-  async function getMoviesByGenre(genres, page = 1, limit = 1) {
+  async function getMoviesByGenre(genres, page = 1, limit = 10) {
     try {
       const response = await fetch('https://api.kinopoisk.dev/v1.4/movie?' + new URLSearchParams({
         "genres.name": genres,
@@ -31,15 +17,15 @@ const headers = {
       }
   
       const movies = await response.json();
-      //renderMovies(movies.docs);
-      return movies.docs;
+      renderMovies(movies.docs);
+      //return movies.docs;
   
     } catch (e) {
        
     }
   }
   
-  getMoviesByGenre("комедия").then(movies => {
+  getMoviesByGenre("документальный").then(movies => {
     console.log(movies);
   });
 
